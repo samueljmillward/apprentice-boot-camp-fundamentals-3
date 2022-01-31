@@ -1,7 +1,7 @@
 <!--- ORGANISER THINGS TO CONSIDER 
 - Which technical competencies, behaviours and knowledge module topics does the bootcamp cover/meet
 - Structuring retros so that they can inform thinking for individual's personal learning records (off the job training record tab in their learning logs)
-- Introducing some sort of test or quiz on basic concept learning points from the bootcamp to validate that they have taken stuff in, and provide organisation mentors with results to help them focus follow ups
+- Introducing some sort of test or quiz on basic concept learning points from the bootcamp to validate that they have taken stuff in, and provide organisation mentors with results to help them focus follow ups. Hello.
 --->
 
 ## Competencies, Behaviours and Knowledge units
