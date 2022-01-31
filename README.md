@@ -13,7 +13,7 @@ These relate to the KSBs defined in the [Level 4 Software Developer standard](ht
 * **S12**: follow software designs and functional or technical specifications
 * **S10**: build, manage and deploy code into the relevant environment
 * **S14**: follow company, team or client approaches to continuous integration, version and source control
-* **S14**: follow company, team or client approaches to continuous integration, version and source control
+* **S14**: follow company, team or client approaches to continuous integration, version and source control. Test.
 
 ## Resources 
 
