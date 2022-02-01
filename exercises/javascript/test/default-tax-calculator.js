@@ -5,15 +5,36 @@ const { TaxCalculator } = require('../tax-calculator');
 * @deprecated
 */
 let DefaultTaxCalculator = class DefaultTaxCalculator extends TaxCalculator {
-  constructor() {
-    super();
+  constructor(year) {
+    super(year);
   } 
+
   calculateTax(vehicle) {
     const co2 = vehicle.co2Emissions;
     const fuelType = vehicle.fuelType;
+    const price = vehicle.listPrice;
+    const year = vehicle.dateOfFirstRegistration.getFullYear()
     const maxIntervals = [0, 50, 75, 90,  100, 110, 130, 150, 170, 190, 225,  255, 1000000]
     const petrolPrices = [0, 10, 25, 105, 125, 145, 165, 205, 515, 830, 1240, 1760, 2070]
+    const isStory4Enabled = true;
 
+    if (isStory4Enabled) {
+      if (this.getYear() > year) {
+        if (price <= 40000) {
+          switch (fuelType) {
+            case (FuelType.PETROL):
+            case (FuelType.DIESEL):
+              return 140;
+            case (FuelType.ELECTRIC):
+              return 0;
+            case (FuelType.ALTERNATIVE_FUEL):
+              return 130;
+            default: break;
+          }
+        }
+      }
+    }
+    
     if (fuelType == FuelType.PETROL) {
         const index = maxIntervals.findIndex(interval => co2 <= interval);
         return petrolPrices[index];

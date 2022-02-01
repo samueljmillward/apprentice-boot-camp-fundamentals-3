@@ -3,7 +3,7 @@ const { Vehicle } = require('../vehicle');
 const { FuelType } = require('../fuel-type');
 
 describe('Tax calculator on an alternative fuel vehicle for the first year', () => {
-  let taxCalculator = new DefaultTaxCalculator();;
+  let taxCalculator = new DefaultTaxCalculator(2020);;
   let FIRST_OF_JAN_2020 = new Date(2020, 1, 1);
 
   it('should return zero for zero grams of CO2 emissions', () => {
